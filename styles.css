@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+}
+
+.main-nav {
+    display: flex;
+    align-items: center;
+}
+
+.company-logo img {
+    height: 50px;
+}
+
+.nav-links {
+    margin-left: 20px;
+}
+
+.nav-links ul {
+    display: flex;
+    list-style: none;
+}
+
+.nav-item {
+    margin: 0 15px;
+    cursor: pointer;
+}
+
+.nav-item:hover {
+    text-decoration: underline;
+}
+
+.search-bar {
+    display: flex;
+}
+
+.news-input {
+    padding: 5px;
+    border: none;
+    border-radius: 5px;
+}
+
+.search-button {
+    padding: 5px 10px;
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.search-button:hover {
+    background-color: #e74c3c;
+}
+
+main {
+    padding: 20px;
+}
+
+.cards-container {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 20px;
+    overflow-y: auto;
+    max-height: 80vh; /* Set height for scrolling */
+    padding-right: 10px; /* Space for scrollbar */
+}
+
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.card-header img {
+    width: 100%;
+    height: auto;
+}
+
+.card-content {
+    padding: 15px;
+}
+
+.card-content h3 {
+    font-size: 1.25rem;
+    margin-bottom: 10px;
+}
+
+.card-content h6 {
+    font-size: 0.875rem;
+    color: gray;
+    margin-bottom: 10px;
+}
+
+.card-content p {
+    font-size: 0.875rem;
+    color: #555;
+}
+
+/* Responsive styles */
+@media (max-width: 1200px) {
+    .cards-container {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 900px) {
+    .cards-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .cards-container {
+        grid-template-columns: 1fr;
+    }
+}
